@@ -1,0 +1,41 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "./public/",
+  "origins": [
+    "http://localhost:3030"
+  ],
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mysql": {
+    "client": "mysql",
+    "connection": "mysql://root:mysql@localhost:3306/you"
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "",
+    "authStrategies": [
+      "jwt",
+      "otp"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://id.youcoin.org",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "otp": {
+      "expriesIn": 10
+    }
+  },
+  "appSecret":"",
+  "sendgrid":{
+    "apiKey": "",
+    "sender": "hello@youcoin.org"
+  }
+}
