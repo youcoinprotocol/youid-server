@@ -46,3 +46,4 @@ packages/**/lib
 config/*.json
 !config/default.json
 !config/custom-environment-variables.json
+lib
