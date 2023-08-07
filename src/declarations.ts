@@ -17,6 +17,10 @@ type ApplicationConfiguration = DefaultAppConfiguration & {
     sender: string
   }
   appSecret: string
+  contracts: {
+    semaphore: string
+    rpc: string
+  }
 }
 
 import { User } from './services/users/users'

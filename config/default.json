@@ -37,5 +37,9 @@
   "sendgrid":{
     "apiKey": "",
     "sender": "hello@youcoin.org"
+  },
+  "contracts":{
+    "semaphore": "0x5227578622469304e774f5C6bFFe0CFb84a65683",
+    "rpc":"https://base-goerli.public.blastapi.io"
   }
 }

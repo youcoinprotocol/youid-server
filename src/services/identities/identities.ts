@@ -2,7 +2,8 @@ import { authenticate } from '@feathersjs/authentication'
 
 import type { Application } from '../../declarations'
 import { IdentityService, getOptions } from './identities.class'
-import { selfData } from '../../hooks/selfData'
+import { selfData } from '../../hooks/self-data'
+import { selfQuery } from '../../hooks/self-query'
 
 export const identityPath = 'identities'
 export const identityMethods = ['find', 'create'] as const
@@ -20,6 +21,7 @@ export const identity = (app: Application) => {
       all: [authenticate('jwt')]
     },
     before: {
+      find: [selfQuery('userId')],
       create: [selfData('userId')]
     }
   })
